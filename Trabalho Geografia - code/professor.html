@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página dos Professores</title>
+  <style>
+    :root {
+      --azul-claro: #f0f8ff;
+      --azul: #2196f3;
+      --azul-escuro: #0d47a1;
+      --branco: #ffffff;
+      --cinza: #f5f5f5;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: var(--cinza);
+    }
+
+    /* Navbar */
+    nav {
+      background: linear-gradient(90deg, var(--azul), var(--azul-escuro));
+      color: var(--branco);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Container principal */
+    .container {
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: var(--branco);
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card h2 {
+      color: var(--azul-escuro);
+      margin-top: 0;
+      border-bottom: 2px solid var(--azul);
+      padding-bottom: 8px;
+    }
+
+    .perfil {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .perfil img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid var(--azul);
+    }
+
+    .perfil-info h3 {
+      margin: 0;
+      color: var(--azul);
+    }
+
+    .perfil-info p {
+      margin: 5px 0;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background-color: var(--azul-claro);
+      border-left: 6px solid var(--azul);
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+      color: var(--azul-escuro);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Sistema Escolar</h1>
+    <ul>
+      <li><a href="principal.html">Início</a></li>
+      <li><a href="#">Alunos e notas</a></li>
+      <li><a href="professor.html">Professores</a></li>
+      <li><a href="#">Turmas</a></li>
+      <li><a href="avisos.html">Avisos</a></li>
+      <li><a href="#">Configurações</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <!-- Perfil do professor -->
+    <div class="card">
+      <h2>Perfil do Professor</h2>
+      <div class="perfil">
+        <img src="https://via.placeholder.com/90" alt="Foto do Professor">
+        <div class="perfil-info">
+          <h3>João Pereira</h3>
+          <p>Disciplina: Matemática</p>
+          <p>Matrícula: PROF-2026-001</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disciplinas -->
+    <div class="card">
+      <h2>Disciplinas Lecionadas</h2>
+      <ul>
+        <li>Matemática - 1º Ano</li>
+        <li>Matemática - 2º Ano</li>
+        <li>Geometria - 3º Ano</li>
+      </ul>
+    </div>
+
+    <!-- Avisos -->
+    <div class="card">
+      <h2>Avisos</h2>
+      <ul>
+        <li>📘 Entregar notas até dia 15/04.</li>
+        <li>📊 Reunião pedagógica dia 18/04.</li>
+        <li>📢 Semana cultural começa dia 20/04.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
+
+

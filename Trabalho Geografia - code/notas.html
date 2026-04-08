@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela do Aluno</title>
+  <style>
+    :root {
+      --azul-claro: #e3f2fd;
+      --azul: #2196f3;
+      --azul-escuro: #0d47a1;
+      --branco: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--azul-claro);
+    }
+
+    nav {
+      background-color: var(--azul);
+      color: var(--branco);
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: var(--branco);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .perfil {
+      display: flex;
+      align-items: center;
+      background: var(--branco);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .perfil img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 3px solid var(--azul);
+    }
+
+    .perfil h2 {
+      margin: 0;
+      color: var(--azul-escuro);
+    }
+
+    .card {
+      background-color: var(--branco);
+      border: 1px solid var(--azul);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      color: var(--azul-escuro);
+      margin-top: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid var(--azul);
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: var(--azul);
+      color: var(--branco);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h1>Sistema Escolar</h1>
+    <ul>
+      <li><a href="principal.html">Início</a></li>
+      <li><a href="notas.html">Alunos e notas</a></li>
+      <li><a href="professor.html">Professores</a></li>
+      <li><a href="#">Turmas</a></li>
+      <li><a href="avisos.html">Avisos</a></li>
+      <li><a href="#">Configurações</a></li>
+    </ul>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <div class="container">
+    <!-- Perfil do aluno -->
+    <div class="perfil">
+      <img src="https://via.placeholder.com/100" alt="Foto do Aluno">
+      <div>
+        <h2>Maria Silva</h2>
+        <p>Turma: 2º Ano - Ensino Médio</p>
+        <p>Matrícula: 2026-001</p>
+      </div>
+    </div>
+
+    <!-- Notas -->
+    <div class="card">
+      <h3>Notas</h3>
+      <table>
+        <tr>
+          <th>Disciplina</th>
+          <th>Nota</th>
+        </tr>
+        <tr>
+          <td>Matemática</td>
+          <td>8.5</td>
+        </tr>
+        <tr>
+          <td>Português</td>
+          <td>9.0</td>
+        </tr>
+        <tr>
+          <td>História</td>
+          <td>7.5</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Avisos -->
+    <div class="card">
+      <h3>Avisos</h3>
+      <p>- Prova de Matemática na próxima segunda-feira.<br>
+         - Entrega do trabalho de História até sexta-feira.<br>
+         - Reunião de pais e mestres dia 15/04.</p>
+    </div>
+  </div>
+</body>
+</html>
+
+

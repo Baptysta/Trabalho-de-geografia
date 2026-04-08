@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coleta de Dados - Sistema Escolar</title>
+  <style>
+    :root {
+      --azul-claro: #f0f8ff;
+      --azul: #2196f3;
+      --azul-escuro: #0d47a1;
+      --branco: #ffffff;
+      --cinza: #f5f5f5;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--azul), var(--azul-escuro));
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .data-container {
+      background-color: var(--branco);
+      border-radius: 12px;
+      padding: 40px;
+      width: 420px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      color: var(--azul-escuro);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .data-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: var(--azul);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: var(--azul-escuro);
+    }
+
+    .classification {
+      font-size: 12px;
+      color: var(--azul);
+      margin-top: 4px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--azul);
+      border-radius: 8px;
+      background-color: var(--azul-claro);
+      color: var(--azul-escuro);
+      transition: 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--azul-escuro);
+      background-color: #eaf4ff;
+    }
+
+    input::placeholder {
+      color: #666;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, var(--azul), var(--azul-escuro));
+      color: var(--branco);
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(90deg, var(--azul-escuro), var(--azul));
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="data-container">
+    <h2>Formulário de Matrícula</h2>
+    <form>
+      <div class="form-group">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" placeholder="Digite seu nome">
+        <div class="classification">Classificação: Dado pessoal</div>
+      </div>
+
+      <div class="form-group">
+        <label for="matricula">Número de Matrícula</label>
+        <input type="text" id="matricula" placeholder="Digite sua matrícula">
+        <div class="classification">Classificação: Dado institucional</div>
+      </div>
+
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" placeholder="Digite seu CPF">
+        <div class="classification">Classificação: Dado sensível</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="Digite seu e-mail">
+        <div class="classification">Classificação: Dado pessoal</div>
+      </div>
+
+      <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" id="telefone" placeholder="Digite seu telefone">
+        <div class="classification">Classificação: Dado pessoal</div>
+      </div>
+
+      <div class="form-group">
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" placeholder="Digite seu endereço">
+        <div class="classification">Classificação: Dado sensível</div>
+      </div>
+
+      <button type="submit" class="submit-btn">Enviar Dados</button>
+    </form>
+  </div>
+</body>
+</html>
